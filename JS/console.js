@@ -1,24 +1,25 @@
-const productos = [
-    { nombre: "huevos", precio: 50 },
-    { nombre: "harina", precio: 50 },
-    { nombre: "pan", precio: 55 },
-    { nombre: "gaseosa", precio: 70 },
-    { nombre: "cerveza", precio: 90 },
-    { nombre: "carne", precio: 150 },
+const producto = [
+    {nombre: "huevos", precio: 50 },
+    {nombre: "harina", precio: 50 },
+    {nombre: "pan", precio: 55 },
+    {nombre: "gaseosa", precio: 70 },
+    {nombre: "cerveza", precio: 90 },
+    {nombre: "carne", precio: 150 },
 ];
+
 let carrito = []
 
 let seleccion = prompt("hola desea comprar algun producto?")
 
 while(seleccion != "si" && seleccion != "no"){
     alert("por favor ingrese si o no")
-    seleccion = prompt("hola desea comprar algo si o no")
+    seleccion = prompt("hola desea comprar algo")
 }
 
 
 if(seleccion == "si"){
     alert("a continuacion nuestra lista de productos")
-    let todoslosProductos = productos.map(
+    let todoslosProductos = producto.map(
         (producto) => producto.nombre + " " + producto.precio + "$")
         alert(todoslosProductos.join(" - "))
 } else if (seleccion == "no"){
